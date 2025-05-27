@@ -19,7 +19,7 @@ const products = [
 
 function HomePage() {
   return (
-    <div>
+    <div className={styles.pageContent}>
       <h1>Добро пожаловать в VPS Rental</h1>
       <p>Выберите подходящий VPS сервер из списка ниже.</p>
 
@@ -37,6 +37,7 @@ function HomePage() {
     </div>
   );
 }
+
 
 
 

@@ -1,5 +1,26 @@
+.pageContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px; /* расстояние между карточками */
+  gap: 16px;
+  margin-top: 24px;
+  justify-items: center; 
+}
+
+@media (max-width: 900px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
 }

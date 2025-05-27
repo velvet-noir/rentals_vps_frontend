@@ -1,0 +1,20 @@
+/* Немного кастомных стилей для Navbar */
+.navbarCustom {
+  background-color: #222 !important; /* чуть темнее стандартного dark */
+  padding: 1rem 2rem;
+}
+
+.brandCustom {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #f8f9fa !important;
+}
+
+.navLinkCustom {
+  font-size: 1.1rem;
+  color: #ddd !important;
+}
+
+.navLinkCustom:hover {
+  color: #fff !important;
+}

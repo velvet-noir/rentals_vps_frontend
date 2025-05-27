@@ -1,4 +1,6 @@
 import ProductCard from '../../components/ProductCard/ProductCard';
+import styles from './HomePage.module.css';
+
 
 const products = [
   { id: 'basic', title: 'VPS Basic', description: 'Базовый VPS сервер', price: '5$ / месяц' },
@@ -9,8 +11,10 @@ const products = [
   { id: 'ultra3', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
   { id: 'ultra4', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
   { id: 'ultra5', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra6', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra7', title: 'фывфывфывфыв', description: 'Максимальная мощность', price: '30$ / месяц' },
+  // { id: 'ultra6', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
+  // { id: 'ultra7', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
+  // { id: 'ultra8', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
+  // { id: 'ultra9', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
 ];
 
 function HomePage() {
@@ -19,7 +23,7 @@ function HomePage() {
       <h1>Добро пожаловать в VPS Rental</h1>
       <p>Выберите подходящий VPS сервер из списка ниже.</p>
 
-      <div className="d-flex flex-wrap gap-3">
+      <div className={styles.cardsContainer}>
         {products.map((product) => (
           <ProductCard
             key={product.id}
@@ -33,6 +37,7 @@ function HomePage() {
     </div>
   );
 }
+
 
 
 export default HomePage;

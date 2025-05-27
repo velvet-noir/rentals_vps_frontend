@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HomePage from './pages/HomePage/HomePage';
-import ProductPage from './pages/ProductPage/ProductPage';
+import routes from './routes';
 
 function App() {
   return (
@@ -11,8 +10,9 @@ function App() {
         <Header />
         <main style={{ flexGrow: 1 }}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/product/:id" element={<ProductPage />} />
+            {routes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
           </Routes>
         </main>
         <Footer />

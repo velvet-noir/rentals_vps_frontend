@@ -1,20 +1,81 @@
-/* Немного кастомных стилей для Navbar */
-.navbarCustom {
-  background-color: #222 !important; /* чуть темнее стандартного dark */
+.header {
+  background-color: #222;
+  color: white;
   padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.brandCustom {
-  font-weight: 700;
-  font-size: 1.7rem;
-  color: #f8f9fa !important;
+.header__container {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.navLinkCustom {
+.header__left {
+  flex: 0 0 auto;
+}
+
+.header__center {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Стиль для Nav.Link ссылок */
+.navLink {
+  color: white !important;           /* Белый цвет текста */
+  text-decoration: none !important;  /* Убираем подчёркивание */
+  font-weight: 600;
   font-size: 1.1rem;
-  color: #ddd !important;
 }
 
-.navLinkCustom:hover {
-  color: #fff !important;
+.navLink:link,
+.navLink:visited,
+.navLink:active,
+.navLink:hover,
+.navLink:focus {
+  color: white !important;           /* Белый цвет текста */
+  text-decoration: none !important;  /* Убираем подчёркивание */
+}
+
+.navLink:hover {
+  text-decoration: underline !important; /* Подчёркивание при наведении */
+}
+
+.header__right {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  .header__container {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .header__center {
+    justify-content: center;
+  }
+
+  .header__right {
+    justify-content: center;
+  }
+}
+
+/* Стиль для бренда */
+.brand {
+  color: white !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+}
+
+.brand:hover {
+  text-decoration: underline !important;
 }

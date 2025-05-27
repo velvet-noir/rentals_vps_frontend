@@ -10,24 +10,25 @@
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  position: relative;
 }
+
 
 .header__left {
   flex: 0 0 auto;
 }
 
 .header__center {
-  flex: 1 1 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
   gap: 2rem;
 }
 
-/* Стиль для Nav.Link ссылок */
 .navLink {
-  color: white !important;           /* Белый цвет текста */
-  text-decoration: none !important;  /* Убираем подчёркивание */
+  color: white !important;
+  text-decoration: none !important;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -37,12 +38,12 @@
 .navLink:active,
 .navLink:hover,
 .navLink:focus {
-  color: white !important;           /* Белый цвет текста */
-  text-decoration: none !important;  /* Убираем подчёркивание */
+  color: white !important;
+  text-decoration: none !important;
 }
 
 .navLink:hover {
-  text-decoration: underline !important; /* Подчёркивание при наведении */
+  text-decoration: underline !important;
 }
 
 .header__right {
@@ -51,7 +52,6 @@
   gap: 0.5rem;
 }
 
-/* Адаптив */
 @media (max-width: 600px) {
   .header__container {
     flex-direction: column;
@@ -68,7 +68,6 @@
   }
 }
 
-/* Стиль для бренда */
 .brand {
   color: white !important;
   font-weight: bold;

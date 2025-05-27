@@ -5,11 +5,11 @@ const AuthButton = () => {
   return (
     <ButtonGroup className={styles.authButtonGroup}>
       <Button variant="outline-light" size="sm">
-        Вход
+        Вход / Регистрация
       </Button>
-      <Button variant="outline-light" size="sm">
+      {/* <Button variant="outline-light" size="sm">
         Регистрация
-      </Button>
+      </Button> */}
     </ButtonGroup>
   );
 };

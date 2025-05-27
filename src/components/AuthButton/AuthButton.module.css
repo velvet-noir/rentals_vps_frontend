@@ -1,18 +1,30 @@
 .authButtonGroup {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .authButtonGroup button {
   color: white;
-  border-color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
   font-weight: 600;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 0.95rem;
+  padding: 0.3rem 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 .authButtonGroup button:hover {
   background-color: white;
-  color: #222; /* Цвет текста при наведении */
+  color: #222;
   border-color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
+}
+
+.authButtonGroup button:focus {
+  outline: none;
+  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.9);
 }

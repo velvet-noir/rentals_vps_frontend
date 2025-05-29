@@ -22,14 +22,14 @@
   top: 10px;
   left: 10px;
   text-decoration: none;
-  color: #457b9d;
+  color: #000000;
   font-size: 0.95rem;
   font-weight: 600;
-  background-color: #fff;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
+  background-color: #e2e2e2;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .backButton:hover {
@@ -73,4 +73,45 @@
   font-size: 1rem;
   color: #000000;
   margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+
+.toggleButton {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  border-width: 1px; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.specifications {
+  padding: 1rem;
+  background-color: #f8f9fa; /* светлый фон */
+  border: 1px solid #dee2e6; /* светлая рамка */
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
+}
+
+/* Список характеристик */
+.specifications ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.specifications li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.specifications li strong {
+  font-weight: 600;
+  color: #333;
 }

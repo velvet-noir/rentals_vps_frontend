@@ -45,10 +45,8 @@ function HomePage() {
     fetchData();
   };
   
-
-
-  if (loading) return <p>Загрузка данных...</p>;
-  if (error) return <p>Ошибка загрузки: {error}</p>;
+  if (loading) return <p>...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className={styles.pageContent}>
@@ -62,18 +60,26 @@ function HomePage() {
         onClear={handleClear}
       />
 
-      <div className={styles.cardsContainer}>
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            image={product.image}
-            mini_description={product.mini_description}
-            price={product.price}
-          />
-        ))}
-      </div>
+      {products.length === 0 ? (
+        <div className={styles.noResultsWrapper}>
+          <div className={styles.noResultsMessage}>
+            Товаров/услуг не найдено
+          </div>
+        </div>
+      ) : (
+        <div className={styles.cardsContainer}>
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              image={product.image}
+              mini_description={product.mini_description}
+              price={product.price}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

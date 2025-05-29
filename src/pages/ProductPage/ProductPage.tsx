@@ -48,7 +48,7 @@ function ProductPage() {
     }
   }, [id]);
 
-  if (loading) return <p>Загрузка...</p>;
+  if (loading) return <p>...</p>;
   if (error) return <p>Ошибка: {error}</p>;
   if (!product) return <p>Данные не найдены</p>;
 

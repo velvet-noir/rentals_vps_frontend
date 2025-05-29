@@ -1,15 +1,9 @@
 import { useEffect, useState } from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import styles from './HomePage.module.css';
+import { fetchServices } from '../../api/services';
+import type { Product } from '../../api/services';
 
-interface Product {
-  id: number;
-  name: string;
-  image: string;
-  mini_description: string;
-  price: string;
-  is_active: boolean;
-}
 
 function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -17,19 +11,7 @@ function HomePage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/services/', {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-      },
-      credentials: 'include'
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
+    fetchServices()
       .then((data) => {
         setProducts(data);
         setLoading(false);
@@ -63,6 +45,5 @@ function HomePage() {
     </div>
   );
 }
-
 
 export default HomePage;

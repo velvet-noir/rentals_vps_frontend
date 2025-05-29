@@ -22,3 +22,18 @@ export async function fetchServices(): Promise<Product[]> {
 
   return response.json();
 }
+
+export async function fetchServiceById(id: string) {
+  const response = await fetch(`/api/services/${id}/`, {
+    headers: {
+      'Accept': 'application/json',
+    },
+    credentials: 'include'
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+
+  return response.json();
+}

@@ -3,19 +3,56 @@ import styles from './HomePage.module.css';
 
 
 const products = [
-  { id: 'basic', title: 'VPS Basic', description: 'Базовый VPS сервер', price: '5$ / месяц' },
-  { id: 'pro', title: 'VPS Pro', description: 'Продвинутый VPS сервер', price: '15$ / месяц' },
-  { id: 'ultra', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra1', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra2', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra3', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra4', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  { id: 'ultra5', title: 'VPS Ultra', description: 'Максимальная мощность', price: '30$ / месяц' },
-  // { id: 'ultra6', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
-  // { id: 'ultra7', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
-  // { id: 'ultra8', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
-  // { id: 'ultra9', title: 'йцукйцуйцуйцу', description: 'Максимальная мощность', price: '30$ / месяц' },
+  {
+    id: 1,
+    name: "VPS Base",
+    image: "http://localhost:9000/r-vps-media/logo/vps.png",
+    mini_description: "Базовое решение для размещения сайтов и приложений на виртуальных серверах.",
+    price: "449.00",
+    is_active: true
+  },
+  {
+    id: 2,
+    name: "VPS Pro",
+    image: "http://localhost:9000/r-vps-media/logo/vps.png",
+    mini_description: "Улучшенный VPS-тариф для высоконагруженных проектов и стабильной работы.",
+    price: "1199.00",
+    is_active: true
+  },
+  {
+    id: 3,
+    name: "Storage VPS Base",
+    image: "http://localhost:9000/r-vps-media/logo/storade_vps.png",
+    mini_description: "Надёжный виртуальный сервер с приоритетом на хранение данных и резервные копии.",
+    price: "1499.00",
+    is_active: true
+  },
+  {
+    id: 4,
+    name: "Storage VPS Pro",
+    image: "http://localhost:9000/r-vps-media/logo/storade_vps.png",
+    mini_description: "Профессиональный VPS для хранения большого объёма информации с высокой скоростью доступа.",
+    price: "4999.00",
+    is_active: true
+  },
+  {
+    id: 5,
+    name: "Dedicated Server",
+    image: "http://localhost:9000/r-vps-media/logo/dedicated_server.png",
+    mini_description: "Идеальный выделенный сервер для бизнеса - стабильность, мощность и контроль.",
+    price: "39999.00",
+    is_active: true
+  },
+  {
+    id: 6,
+    name: "Dedicated Server Enterprise",
+    image: "http://localhost:9000/r-vps-media/logo/dedicated_server.png",
+    mini_description: "Корпоративный сервер с максимальной производительностью для критичных задач.",
+    price: "89999.00",
+    is_active: true
+  }
 ];
+
 
 function HomePage() {
   return (
@@ -28,8 +65,9 @@ function HomePage() {
           <ProductCard
             key={product.id}
             id={product.id}
-            title={product.title}
-            description={product.description}
+            name={product.name}
+            image={product.image}
+            mini_description={product.mini_description}
             price={product.price}
           />
         ))}
@@ -37,8 +75,6 @@ function HomePage() {
     </div>
   );
 }
-
-
 
 
 export default HomePage;

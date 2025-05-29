@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: flex-start;
   padding: 2rem;
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   background-color: #ffffff;
   min-height: 75vh;
 }
@@ -76,7 +76,6 @@
   text-align: justify;
 }
 
-
 .toggleButton {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -86,20 +85,20 @@
   border-radius: 8px;
   padding: 0.6rem 1rem;
   border-width: 1px; 
+  background-color: #e2e2e2;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .specifications {
   padding: 1rem;
-  background-color: #f8f9fa; /* светлый фон */
-  border: 1px solid #dee2e6; /* светлая рамка */
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
   border-radius: 8px;
   margin-top: 0.5rem;
   transition: max-height 0.4s ease, opacity 0.4s ease;
   overflow: hidden;
 }
 
-/* Список характеристик */
 .specifications ul {
   list-style-type: none;
   padding: 0;

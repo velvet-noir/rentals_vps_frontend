@@ -1,7 +1,7 @@
-import { Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import styles from './ProductCard.module.css';
-import cardImage from '../../assets/no_image.png';
+import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import styles from "./ProductCard.module.css";
+import cardImage from "../../assets/no_image.png";
 
 interface ProductCardProps {
   id: number;
@@ -11,7 +11,13 @@ interface ProductCardProps {
   price: string;
 }
 
-function ProductCard({ id, name, image, mini_description, price }: ProductCardProps) {
+function ProductCard({
+  id,
+  name,
+  image,
+  mini_description,
+  price,
+}: ProductCardProps) {
   const imageUrl = image ? image : cardImage;
 
   return (
@@ -23,13 +29,14 @@ function ProductCard({ id, name, image, mini_description, price }: ProductCardPr
         <div className={styles.cardFooter}>
           <Card.Text className={styles.price}>{price} ₽ / месяц</Card.Text>
           <Link to={`/product/${id}`}>
-            <Button variant="primary" className={styles.button}>Подробнее</Button>
+            <Button variant="primary" className={styles.button}>
+              Подробнее
+            </Button>
           </Link>
         </div>
       </Card.Body>
     </Card>
   );
 }
-
 
 export default ProductCard;

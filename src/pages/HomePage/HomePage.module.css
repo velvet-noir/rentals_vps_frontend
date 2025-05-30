@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 0 16px;
   text-align: center;
-  
 }
 
 .cardsContainer {
@@ -11,7 +10,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 24px;
-  justify-items: center; 
+  justify-items: center;
 }
 
 @media (max-width: 900px) {

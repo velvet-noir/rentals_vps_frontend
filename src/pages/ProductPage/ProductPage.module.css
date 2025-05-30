@@ -13,7 +13,7 @@
   max-width: 90%;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -28,8 +28,10 @@
   background-color: #e2e2e2;
   padding: 0.6rem 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .backButton:hover {
@@ -45,11 +47,10 @@
   margin-bottom: 1rem;
 }
 
-
 .productCard img {
   max-height: 300px;
   width: auto;
-  margin-top: 1rem; 
+  margin-top: 1rem;
   object-fit: contain;
   border-radius: 12px 12px 0 0;
 }
@@ -84,9 +85,11 @@
   font-weight: 600;
   border-radius: 8px;
   padding: 0.6rem 1rem;
-  border-width: 1px; 
+  border-width: 1px;
   background-color: #e2e2e2;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .specifications {
@@ -95,7 +98,9 @@
   border: 1px solid #dee2e6;
   border-radius: 8px;
   margin-top: 0.5rem;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease;
   overflow: hidden;
 }
 

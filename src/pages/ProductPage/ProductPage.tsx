@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
-import styles from './ProductPage.module.css';
-import cardImage from '../../assets/no_image.png';
-import { fetchServiceById } from '../../api/services';
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
+import styles from "./ProductPage.module.css";
+import cardImage from "../../assets/no_image.png";
+import { fetchServiceById } from "../../api/services";
 
 interface Specification {
   id: number;
@@ -24,7 +24,6 @@ interface Product {
   is_active: boolean;
   specifications: Specification[];
 }
-
 
 function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -58,29 +57,43 @@ function ProductPage() {
   return (
     <div className={styles.pageContainer}>
       <Card className={styles.productCard}>
-        <Link to="/" className={styles.backButton}>← Назад</Link>
+        <Link to="/" className={styles.backButton}>
+          ← Назад
+        </Link>
         <div className={styles.imageTitleWrapper}>
           <Card.Img variant="top" src={imageUrl} alt={product.name} />
           <Card.Title className={styles.title}>{product.name}</Card.Title>
         </div>
         <Card.Body>
-          <Card.Text className={styles.description}>{spec.description}</Card.Text>
-          <Card.Text className={styles.price}>{product.price} ₽ / месяц</Card.Text>
-          <Button 
-            variant="outline-primary" 
-            onClick={() => setShowSpecs(!showSpecs)} 
+          <Card.Text className={styles.description}>
+            {spec.description}
+          </Card.Text>
+          <Card.Text className={styles.price}>
+            {product.price} ₽ / месяц
+          </Card.Text>
+          <Button
+            variant="outline-primary"
+            onClick={() => setShowSpecs(!showSpecs)}
             className={styles.toggleButton}
           >
-            {showSpecs ? 'Скрыть характеристики' : 'Показать характеристики'}
+            {showSpecs ? "Скрыть характеристики" : "Показать характеристики"}
           </Button>
 
           {showSpecs && (
             <div className={styles.specifications}>
               <ul>
-                <li><strong>Процессор:</strong> {spec.processor}</li>
-                <li><strong>ОЗУ:</strong> {spec.ram}</li>
-                <li><strong>Диск:</strong> {spec.disk}</li>
-                <li><strong>Скорость интернета:</strong> {spec.internet_speed}</li>
+                <li>
+                  <strong>Процессор:</strong> {spec.processor}
+                </li>
+                <li>
+                  <strong>ОЗУ:</strong> {spec.ram}
+                </li>
+                <li>
+                  <strong>Диск:</strong> {spec.disk}
+                </li>
+                <li>
+                  <strong>Скорость интернета:</strong> {spec.internet_speed}
+                </li>
               </ul>
             </div>
           )}

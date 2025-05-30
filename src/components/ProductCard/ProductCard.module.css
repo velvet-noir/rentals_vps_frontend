@@ -4,24 +4,26 @@
   border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
   width: 100%;
-  height: auto;           /* убираем фиксированную высоту */
-  max-height: 160px;      /* ограничиваем высоту */
-  object-fit: contain;    /* картинка полностью вписывается в контейнер */
+  height: auto; /* убираем фиксированную высоту */
+  max-height: 160px; /* ограничиваем высоту */
+  object-fit: contain; /* картинка полностью вписывается в контейнер */
   background-color: #f9f9f9; /* добавим фон, если картинка прозрачная */
-  padding: 10px;          /* небольшой отступ вокруг картинки */
+  padding: 10px; /* небольшой отступ вокруг картинки */
 }
 
 .cardBody {

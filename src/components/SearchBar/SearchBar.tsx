@@ -1,6 +1,6 @@
-import React from 'react';
-import type { ChangeEvent } from 'react';
-import styles from './SearchBar.module.css';
+import React from "react";
+import type { ChangeEvent } from "react";
+import styles from "./SearchBar.module.css";
 
 interface SearchBarProps {
   filter: string;
@@ -9,7 +9,12 @@ interface SearchBarProps {
   onClear: () => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ filter, setFilter, onSearch, onClear }) => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  filter,
+  setFilter,
+  onSearch,
+  onClear,
+}) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFilter(e.target.value);
   };

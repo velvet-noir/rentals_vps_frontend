@@ -1,10 +1,10 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs';
-import routes from './routes';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
+import routes from "./routes";
 
-import styles from './App.module.css';
+import styles from "./App.module.css";
 
 function App() {
   return (

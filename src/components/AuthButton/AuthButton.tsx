@@ -1,5 +1,5 @@
-import { Button, ButtonGroup } from 'react-bootstrap';
-import styles from './AuthButton.module.css';
+import { Button, ButtonGroup } from "react-bootstrap";
+import styles from "./AuthButton.module.css";
 
 const AuthButton = () => {
   return (

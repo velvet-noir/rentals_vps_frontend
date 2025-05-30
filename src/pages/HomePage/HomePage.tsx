@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import ProductCard from '../../components/ProductCard/ProductCard';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import styles from './HomePage.module.css';
-import { fetchServices } from '../../api/services';
+import { useEffect, useState } from "react";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import styles from "./HomePage.module.css";
+import { fetchServices } from "../../api/services";
 
 export interface Product {
   id: number;
@@ -17,13 +17,13 @@ function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [filter, setFilter] = useState<string>('');
+  const [filter, setFilter] = useState<string>("");
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const fetchData = (query: string = '') => {
+  const fetchData = (query: string = "") => {
     setLoading(true);
     fetchServices(query)
       .then((data) => {
@@ -41,10 +41,10 @@ function HomePage() {
   };
 
   const handleClear = () => {
-    setFilter('');
+    setFilter("");
     fetchData();
   };
-  
+
   if (loading) return <p>...</p>;
   if (error) return <p>{error}</p>;
 

@@ -63,13 +63,6 @@
   text-align: center;
 }
 
-.price {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #000000;
-  margin-bottom: 1rem;
-}
-
 .description {
   font-size: 1rem;
   color: #000000;
@@ -118,4 +111,14 @@
 .specifications li strong {
   font-weight: 600;
   color: #333;
+}
+
+.priceWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
 }

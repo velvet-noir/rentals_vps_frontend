@@ -1,9 +1,10 @@
+import styles from "./ProductPage.module.css";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
-import styles from "./ProductPage.module.css";
-import cardImage from "../../assets/no_image.png";
 import { fetchServiceById } from "../../api/services";
+import cardImage from "../../assets/no_image.png";
+import AddToCartButton from "../../components/AddToCartButton/AddToCartButton";
 
 interface Specification {
   id: number;
@@ -37,7 +38,7 @@ function ProductPage() {
     if (id) {
       fetchServiceById(id)
         .then((data) => {
-          setProduct(data.data); // data.data содержит сам продукт
+          setProduct(data.data);
           setLoading(false);
         })
         .catch((err) => {
@@ -47,7 +48,7 @@ function ProductPage() {
     }
   }, [id]);
 
-  if (loading) return <p>...</p>;
+  if (loading) return <p></p>;
   if (error) return <p>Ошибка: {error}</p>;
   if (!product) return <p>Данные не найдены</p>;
 
@@ -68,8 +69,9 @@ function ProductPage() {
           <Card.Text className={styles.description}>
             {spec.description}
           </Card.Text>
-          <Card.Text className={styles.price}>
-            {product.price} ₽ / месяц
+          <Card.Text className={styles.priceWrapper}>
+            <span>{product.price} ₽ / месяц</span>
+            <AddToCartButton />
           </Card.Text>
           <Button
             variant="outline-primary"

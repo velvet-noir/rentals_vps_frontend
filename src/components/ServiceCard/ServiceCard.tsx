@@ -30,7 +30,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{mini_description}</Card.Text>
-        <div className={styles.price}>{price} ₽</div>
+        <div className={styles.price}>от {price} ₽/мес.</div>
         <Button variant="primary" className={styles.button}>
           Подробнее
         </Button>

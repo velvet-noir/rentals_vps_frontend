@@ -61,7 +61,7 @@ const ServiceDetail: React.FC = () => {
         </Col>
         <Col md={7}>
           <h2 className={styles.title}>{service.name}</h2>
-          <p className={styles.price}>{service.price} ₽</p>
+          <p className={styles.price}>{service.price} ₽/мес.</p>
           <p className={styles.description}>{service.description}</p>
           <ul className={styles.characteristicsList}>
             <li>

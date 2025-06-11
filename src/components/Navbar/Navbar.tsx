@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
         </RBNavbar.Brand>
         <RBNavbar.Toggle aria-controls="basic-navbar-nav" />
         <RBNavbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          {/* <Nav className="me-auto">
             <Nav.Item className={styles.navItem}>
               <NavLink
                 to="/"
@@ -48,6 +48,60 @@ const Navbar: React.FC = () => {
                 }
               >
                 Заявки
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item className={styles.navItem}>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.activeLink} ${styles.navLink}`
+                    : styles.navLink
+                }
+              >
+                Вход/регистрация
+              </NavLink>
+            </Nav.Item>
+          </Nav> */}
+          <Nav className="me-auto">
+            <Nav.Item className={styles.navItem}>
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.activeLink} ${styles.navLink}`
+                    : styles.navLink
+                }
+              >
+                Главная
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item className={styles.navItem}>
+              <NavLink
+                to="/orders"
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.activeLink} ${styles.navLink}`
+                    : styles.navLink
+                }
+              >
+                Заявки
+              </NavLink>
+            </Nav.Item>
+          </Nav>
+
+          <Nav className={styles.navRight}>
+            <Nav.Item className={styles.navItem}>
+              <NavLink
+                to="/cart"
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.activeLink} ${styles.navLink}`
+                    : styles.navLink
+                }
+              >
+                Корзина
               </NavLink>
             </Nav.Item>
             <Nav.Item className={styles.navItem}>

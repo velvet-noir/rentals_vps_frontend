@@ -51,8 +51,9 @@ const HomePage: React.FC = () => {
     <Container className={styles.container}>
       <h1 className={styles.title}>Услуги</h1>
 
-      <InputGroup className="mb-3">
+      <InputGroup className={`${styles.searchGroup}`}>
         <Form.Control
+          className={styles.searchInput}
           placeholder="Поиск по названию услуги"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -63,10 +64,18 @@ const HomePage: React.FC = () => {
             }
           }}
         />
-        <Button variant="primary" onClick={handleSearch}>
+        <Button
+          variant="primary"
+          onClick={handleSearch}
+          className={styles.searchButton}
+        >
           Найти
         </Button>
-        <Button variant="outline-secondary" onClick={handleClear}>
+        <Button
+          variant="outline-secondary"
+          onClick={handleClear}
+          className={styles.clearButton}
+        >
           Очистить
         </Button>
       </InputGroup>

@@ -1,0 +1,47 @@
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa; /* светлый фон */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbarBrand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.navbarBrand:hover {
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+.navItem {
+  margin-left: 1rem;
+}
+
+.activeLink {
+  font-weight: 600;
+  color: #0d6efd; /* bootstrap primary */
+  text-decoration: none;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 2px;
+}
+
+.activeLink:hover {
+  color: #0a58ca;
+  text-decoration: none;
+}
+
+.navLink {
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  color: #0d6efd;
+  text-decoration: none;
+  cursor: pointer;
+}

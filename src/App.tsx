@@ -1,13 +1,31 @@
-// App.jsx
-import { Button } from 'react-bootstrap';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Navbar from "./components/Navbar/Navbar";
+import Footer from './components/Footer/Footer';
+
+// import Home from './pages/Home/Home';
+// import ServiceDetail from './pages/ServiceDetail/ServiceDetail';
+// import Cart from './pages/Cart/Cart';
+// import Orders from './pages/Orders/Orders';
+// import Login from './pages/Login/Login';
+
+const App: React.FC = () => {
   return (
-    <div className="container mt-5">
-      <h1>Hello, React-Bootstrap!</h1>
-      <Button variant="primary">Нажми меня</Button>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <main style={{ minHeight: "80vh", padding: "20px" }}>
+        <Routes>
+          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path="/service/:id" element={<ServiceDetail />} /> */}
+          {/* <Route path="/cart" element={<Cart />} /> */}
+          {/* <Route path="/orders" element={<Orders />} /> */}
+          {/* <Route path="/login" element={<Login />} /> */}
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

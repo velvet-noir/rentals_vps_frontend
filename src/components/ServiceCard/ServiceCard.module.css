@@ -1,0 +1,23 @@
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  object-fit: cover;
+  height: 200px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.button {
+  width: 100%;
+}

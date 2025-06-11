@@ -6,10 +6,12 @@ import Layout from "./components/Layout/Layout.tsx";
 import Cart from "./pages/Cart/Cart";
 import Orders from "./pages/Orders/Orders";
 import Login from "./pages/Login/Login";
+import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs"; 
 
 const App: React.FC = () => {
   return (
     <Layout>
+      <Breadcrumbs />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/service/:id" element={<ServiceDetail />} />

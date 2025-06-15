@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {
-  Container,
-  Spinner,
-  Alert,
-  Table,
-  Button,
-} from "react-bootstrap";
+import { Container, Spinner, Alert, Table, Button } from "react-bootstrap";
 
 interface Service {
   id: number;
@@ -56,7 +50,10 @@ const Orders: React.FC = () => {
       });
   };
 
-  const handleUpdateStatus = (id: number, newStatus: "COMPLETED" | "REJECTED") => {
+  const handleUpdateStatus = (
+    id: number,
+    newStatus: "COMPLETED" | "REJECTED",
+  ) => {
     axios
       .put(
         `/api/app/${id}/`,
@@ -68,7 +65,7 @@ const Orders: React.FC = () => {
             "Content-Type": "application/json",
           },
           withCredentials: true,
-        }
+        },
       )
       .then(() => fetchOrders())
       .catch((error) => {
@@ -113,7 +110,7 @@ const Orders: React.FC = () => {
               .sort(
                 (a, b) =>
                   new Date(b.created_at).getTime() -
-                  new Date(a.created_at).getTime()
+                  new Date(a.created_at).getTime(),
               )
               .map((order) => (
                 <tr key={order.pk}>
@@ -123,15 +120,15 @@ const Orders: React.FC = () => {
                   <td>{new Date(order.updated_at).toLocaleString()}</td>
                   <td>{order.user_creator}</td>
                   <td>{order.user_moderator ?? "—"}</td>
-                  <td>
-                    {order.services.map((s) => s.name).join(", ")}
-                  </td>
+                  <td>{order.services.map((s) => s.name).join(", ")}</td>
                   <td>
                     <div className="d-flex flex-column gap-1">
                       <Button
                         variant="success"
                         size="sm"
-                        onClick={() => handleUpdateStatus(order.pk, "COMPLETED")}
+                        onClick={() =>
+                          handleUpdateStatus(order.pk, "COMPLETED")
+                        }
                       >
                         Завершить
                       </Button>

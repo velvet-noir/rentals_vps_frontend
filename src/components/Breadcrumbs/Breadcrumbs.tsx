@@ -13,9 +13,7 @@ const Breadcrumbs: React.FC = () => {
       {pathnames.map((name, index) => (
         <React.Fragment key={index}>
           <span className={styles.separator}>/</span>
-          <span className={styles.segment}>
-            {decodeURIComponent(name)}
-          </span>
+          <span className={styles.segment}>{decodeURIComponent(name)}</span>
         </React.Fragment>
       ))}
     </nav>

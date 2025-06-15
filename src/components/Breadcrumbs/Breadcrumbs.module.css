@@ -1,16 +1,15 @@
 .breadcrumb {
   font-size: 0.95rem;
-  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
   align-items: center;
-  color: #9ca3af;
+  color: #d1d5db;
   user-select: none;
 }
 
 .segment {
-  color: #9ca3af;
+  color: #d1d5db;
 }
 
 .separator {

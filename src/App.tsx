@@ -6,7 +6,7 @@ import Layout from "./components/Layout/Layout.tsx";
 import Cart from "./pages/Cart/Cart";
 import Orders from "./pages/Orders/Orders";
 import Login from "./pages/Login/Login";
-import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs"; 
+import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
 
 const App: React.FC = () => {
   return (

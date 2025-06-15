@@ -1,0 +1,35 @@
+.wrapper {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+.switchMode {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.switchMode span {
+  color: #2563eb;
+  cursor: pointer;
+  margin-left: 4px;
+  text-decoration: underline;
+}

@@ -62,7 +62,6 @@ const LoginPage: React.FC = () => {
             const userData = await fetchUserRole();
             dispatch(setIsStaff(userData.is_staff));
             dispatch(setUsername(userData.username));
-            console.log("username из Redux:", userData.username);
             navigate("/");
           } catch (err) {
             setError(

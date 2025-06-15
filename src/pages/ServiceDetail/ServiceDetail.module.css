@@ -48,3 +48,8 @@
   margin-bottom: 0.5rem;
   color: #343a40;
 }
+
+.buttonWrapper {
+  text-align: right;
+  margin-top: 1.5rem;
+}

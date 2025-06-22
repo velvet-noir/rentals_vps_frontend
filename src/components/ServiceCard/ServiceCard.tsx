@@ -24,9 +24,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     navigate(`/service/${id}`);
   };
 
+  const imageSrc = image && image.trim() !== "" ? image : "/images/image.png";
   return (
     <Card className={styles.card} onClick={handleClick}>
-      <Card.Img variant="top" src={image} className={styles.image} />
+      <Card.Img variant="top" src={imageSrc} className={styles.image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{mini_description}</Card.Text>

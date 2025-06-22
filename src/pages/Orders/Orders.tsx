@@ -107,11 +107,15 @@ const Orders: React.FC = () => {
           </thead>
           <tbody>
             {[...orders]
-              .sort(
-                (a, b) =>
+              .sort((a, b) => {
+                if (a.status === "FORMED" && b.status !== "FORMED") return -1;
+                if (a.status !== "FORMED" && b.status === "FORMED") return 1;
+
+                return (
                   new Date(b.created_at).getTime() -
-                  new Date(a.created_at).getTime(),
-              )
+                  new Date(a.created_at).getTime()
+                );
+              })
               .map((order) => (
                 <tr key={order.pk}>
                   <td>{order.pk}</td>
@@ -126,15 +130,18 @@ const Orders: React.FC = () => {
                       <Button
                         variant="success"
                         size="sm"
+                        disabled={order.status === "COMPLETED"}
                         onClick={() =>
                           handleUpdateStatus(order.pk, "COMPLETED")
                         }
                       >
                         Завершить
                       </Button>
+
                       <Button
                         variant="danger"
                         size="sm"
+                        disabled={order.status === "REJECTED"}
                         onClick={() => handleUpdateStatus(order.pk, "REJECTED")}
                       >
                         Отклонить
